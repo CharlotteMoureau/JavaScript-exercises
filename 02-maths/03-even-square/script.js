@@ -9,12 +9,14 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    document.getElementById("run").addEventListener("click", function() {
+    document.getElementById("run").addEventListener("click", function () {
 
         // your code here
-
+        for (var x = 1; x < 22; x++) {
+            console.log(Math.pow(x, 2));
+        }
     });
 
 })();
