@@ -14,7 +14,7 @@
     document.getElementById("run").addEventListener("click", function () {
 
         // your code here
-        for (var x = 1; x < 22; x++) {
+        for (let x = 1; x < 22; x++) {
             console.log(Math.pow(x, 2));
         }
     });

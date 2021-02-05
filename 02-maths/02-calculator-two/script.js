@@ -20,16 +20,17 @@
             case 'addition':
                 alert(parseInt(num1) + parseInt(num2));
                 break;
+
             case 'substraction':
-                alert(num1 - num2);
+                alert(parseInt(num1) - parseInt(num2));
                 break;
 
             case 'multiplication':
-                alert(num1 * num2);
+                alert(parseInt(num1) * parseInt(num2));
                 break;
 
             case 'division':
-                alert(num1 / num2);
+                alert(parseInt(num1) / parseInt(num2));
                 break;
 
             default:
