@@ -11,7 +11,7 @@
 
 (function () {
 
-    var Babelutte = 'Hello, World!';
+    var test = 'Hello, World!';
 
-    window.alert(Babelutte);
+    window.alert(test);
 })();
