@@ -16,7 +16,6 @@
     // your code here
     let d = new Date();
     let hour = d.getHours();
-    console.log(hour);
 
     if (hour <= 18)
         document.getElementById("target").innerHTML = "Hello!";
