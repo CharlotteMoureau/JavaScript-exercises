@@ -12,14 +12,16 @@
 (function () {
 
     var age = prompt("How old are you?");
-    var gender = prompt("What is your gender?");
+    var gender = prompt("What is your gender?").toLowerCase();
     var town = prompt("Where do you live?");
 
     var x = confirm(`Is it correct? You are ${age}, you identify as: ${gender}, you live in ${town}.`);
     if (x == true) {
-        window.alert("Ok!")
+        alert("Ok!");
     } else {
-        location.reload()
+        var age = prompt("How old are you?");
+        var gender = prompt("What is your gender?");
+        var town = prompt("Where do you live?");
     }
 
 

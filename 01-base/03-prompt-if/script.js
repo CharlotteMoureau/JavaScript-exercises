@@ -11,12 +11,12 @@
 
 (function () {
 
-  var user = prompt("Do you want more cake?").toLowerCase;
+  var user = prompt("Do you want more cake?").toLowerCase();
 
   if (user == "yes") {
-    window.alert("Congratulations! Here's some cake!")
+    alert("Congratulations! Here's some cake!")
   } else {
-    window.alert("More cake for me then :p !")
+    alert("More cake for me then :p !")
   }
 
 })();
