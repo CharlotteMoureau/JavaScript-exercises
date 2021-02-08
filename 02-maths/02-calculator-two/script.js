@@ -18,19 +18,19 @@
     const performOperation = operation => {
         switch (operation) {
             case 'addition':
-                alert(parseInt(num1) + parseInt(num2));
+                alert(parseFloat(num1) + parseFloat(num2));
                 break;
 
             case 'substraction':
-                alert(parseInt(num1) - parseInt(num2));
+                alert((num1) - (num2));
                 break;
 
             case 'multiplication':
-                alert(parseInt(num1) * parseInt(num2));
+                alert((num1) * (num2));
                 break;
 
             case 'division':
-                alert(parseInt(num1) / parseInt(num2));
+                alert((num1) / (num2));
                 break;
 
             default:
