@@ -41,7 +41,7 @@
 
     // your code here
     document.getElementById("run").addEventListener("click", function () {
-        people.forEach(element.firstname => console.log(element.firstname));
+        people.forEach((item, index, people) => console.log(`${people[index].firstname} ${people[index].lastname}`));
     });
 
 })();

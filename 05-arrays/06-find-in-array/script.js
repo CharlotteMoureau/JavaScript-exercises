@@ -9,7 +9,7 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     const people = [
         {
@@ -90,5 +90,14 @@
     ];
 
     // your code here
+    document.getElementById("run").addEventListener("click", function () {
+
+        people.forEach(function (item, index, people) {
+            if (people[index].firstname == "Jean" && people[index].lastname == "Dupont")
+                console.log(people[index].email);
+        });
+        console.log(people.indexOf('Jean Dupont'));
+
+    });
 
 })();
