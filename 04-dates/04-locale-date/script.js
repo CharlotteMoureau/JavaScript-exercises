@@ -15,7 +15,13 @@
 
     // your code here
     let today = new Date();
+    let day = today.toLocaleDateString('en-EN', { weekday: 'long' });
+    let date = today.getDate();
+    let month = today.toLocaleDateString('en-EN', { month: 'long' });
+    let year = today.getFullYear();
+    let hour = today.getHours();
+    let minutes = today.getMinutes();
 
-    document.getElementById("target").innerHTML = "Hello!";
+    document.getElementById("target").innerHTML = `${day} ${date} ${month} ${year}, ${hour}h${minutes}`;
 
 })();
