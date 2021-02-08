@@ -9,8 +9,24 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    // your code here
+    document.getElementById("run").addEventListener("click", function () {
 
+        function numberOfFridaythe13thsIn(year) {
+            var count = 0;
+            for (var month = 0; month < 12; month++) {
+                var d = new Date(year, month, 13);
+                if (d.getDay() == 5) {
+                    let preciseMonth = d.toLocaleString('en-EN', { month: 'long' });
+                    console.log(preciseMonth);
+                    count++;
+                }
+            }
+            return count;
+        }
+
+        alert(`There is ${numberOfFridaythe13thsIn(document.getElementById("year").value)} Friday the 13th in ${document.getElementById("year").value} (see the console to know which month).`);
+
+    });
 })();
