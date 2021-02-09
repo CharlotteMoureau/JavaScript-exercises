@@ -14,8 +14,10 @@
     document.getElementById("run").addEventListener("click", function () {
 
         // your code here
-        for (let x = 1; x < 22; x++) {
-            console.log(Math.pow(x, 2));
+        for (let x = 1; x <= 21; x++) {
+            if (x % 2 == 0) {
+                console.log(Math.pow(x, 2));
+            }
         }
     });
 

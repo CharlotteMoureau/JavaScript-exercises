@@ -10,40 +10,34 @@
 // You will have time to focus on it later.
 
 (function () {
-    // to get the value of an input: document.getElementById("element-id").value
+    // to get the value of an input: document.getElementById("element-id")
+    let number1 = document.getElementById("op-one");
+    let number2 = document.getElementById("op-two");
 
     document.getElementById("addition").addEventListener("click", function () {
-        let number1 = document.getElementById("op-one").value;
-        let number2 = document.getElementById("op-two").value;
 
-        let result = parseFloat(number1) + parseFloat(number2);
+        let result = parseFloat(number1.value) + parseFloat(number2.value);
 
         alert(result);
     });
 
     document.getElementById("substraction").addEventListener("click", function () {
-        let number1 = document.getElementById("op-one").value;
-        let number2 = document.getElementById("op-two").value;
 
-        let result = number1 - number2;
+        let result = number1.value - number2.value;
 
         alert(result);
     });
 
     document.getElementById("multiplication").addEventListener("click", function () {
-        let number1 = document.getElementById("op-one").value;
-        let number2 = document.getElementById("op-two").value;
 
-        let result = number1 * number2;
+        let result = number1.value * number2.value;
 
         alert(result);
     });
 
     document.getElementById("division").addEventListener("click", function () {
-        let number1 = document.getElementById("op-one").value;
-        let number2 = document.getElementById("op-two").value;
 
-        let result = number1 / number2;
+        let result = number1.value / number2.value;
 
         alert(result);
     });

@@ -92,10 +92,18 @@
     // your code here
     document.getElementById('run').addEventListener('click', function () {
 
-        people.forEach(function (item, index, people) {
-            if (people[index].age > 18)
-                console.log(people[index].email, index);
-        });
+        // let adults = [];
+        // for (let i = 0; i < people.length; i++) {
+        //     if (people[i].age > 18) {
+        //         adults.push(people[i]);
+        //     }
+        // }
+
+        // console.log(adults);
+
+        let adults = people.filter(people => people.age > 18);
+        console.log(adults);
+
     });
 
 })();

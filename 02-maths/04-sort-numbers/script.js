@@ -20,7 +20,7 @@
         // your code here
         num2.sort(function (a, b) { return a - b });
 
-        console.log(num2);
+        alert(num2);
     });
 
 })();

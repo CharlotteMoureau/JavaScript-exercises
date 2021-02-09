@@ -97,6 +97,16 @@
                 console.log(people[index].email, index);
         });
 
-    });
+        // const fName = people.find(({ firstname }) => firstname === 'Jean');
+        // const lName = people.find(({ lastname }) => lastname === 'Dupont');
 
+
+        // people.forEach(function (item, index, people) {
+
+        //     if (people[index].firstname == fName.firstname && people[index].lastname == lName.lastname) {
+        //         console.log(people[index].email, index);
+        //     }
+        // });
+    });
 })();
+
