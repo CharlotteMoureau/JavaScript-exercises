@@ -18,7 +18,7 @@
 
         let result = parseFloat(number1) + parseFloat(number2);
 
-        window.alert(result);
+        alert(result);
     });
 
     document.getElementById("substraction").addEventListener("click", function () {
@@ -27,7 +27,7 @@
 
         let result = number1 - number2;
 
-        window.alert(result);
+        alert(result);
     });
 
     document.getElementById("multiplication").addEventListener("click", function () {
@@ -36,7 +36,7 @@
 
         let result = number1 * number2;
 
-        window.alert(result);
+        alert(result);
     });
 
     document.getElementById("division").addEventListener("click", function () {
@@ -45,6 +45,6 @@
 
         let result = number1 / number2;
 
-        window.alert(result);
+        alert(result);
     });
 })();

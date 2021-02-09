@@ -19,9 +19,7 @@
     if (x == true) {
         alert("Ok!");
     } else {
-        var age = prompt("How old are you?");
-        var gender = prompt("What is your gender?");
-        var town = prompt("Where do you live?");
+        window.location = "index.html";
     }
 
 

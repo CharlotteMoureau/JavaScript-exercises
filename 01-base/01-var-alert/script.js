@@ -13,5 +13,5 @@
 
     var test = 'Hello, World!';
 
-    window.alert(test);
+    alert(test);
 })();

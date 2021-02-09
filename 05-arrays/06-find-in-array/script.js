@@ -94,9 +94,8 @@
 
         people.forEach(function (item, index, people) {
             if (people[index].firstname == "Jean" && people[index].lastname == "Dupont")
-                console.log(people[index].email);
+                console.log(people[index].email, index);
         });
-        console.log(people.indexOf('Jean Dupont'));
 
     });
 

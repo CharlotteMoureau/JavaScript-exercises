@@ -90,5 +90,12 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click', function () {
+
+        people.forEach(function (item, index, people) {
+            if (people[index].age > 18)
+                console.log(people[index].email, index);
+        });
+    });
 
 })();
