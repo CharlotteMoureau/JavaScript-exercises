@@ -48,8 +48,10 @@
 
         if (randomBird.name == "mouette") {
             document.getElementById("target").innerHTML = `Le.la ${randomBird.name} ${randomAdj}.e`
+
         } else if (randomBird.fem == true) {
             document.getElementById("target").innerHTML = `La ${randomBird.name} ${randomAdj}e`;
+
         } else {
             document.getElementById("target").innerHTML = `Le ${randomBird.name} ${randomAdj}`;
         }
