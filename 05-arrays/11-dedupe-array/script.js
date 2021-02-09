@@ -9,7 +9,7 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     const fruits = [
         "cerise",
@@ -29,5 +29,8 @@
     ];
 
     // your code here
-
+    document.getElementById('run').addEventListener('click', function () {
+        let killDuplicates = [...new Set(fruits)];
+        console.log(killDuplicates);
+    });
 })();

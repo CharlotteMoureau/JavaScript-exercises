@@ -92,15 +92,11 @@
     // your code here
     document.getElementById('run').addEventListener('click', function () {
 
-        let sum = people.reduce((people, index) => {
-            return people + index.price
-        }, 0);
-        console.log(sum);
-        // people.forEach(function (people, index, people) {
-        //     let sumOfAges = (people[index].age).reduce((a, b) => a + b, 0);
-        //     console.log(sumOfAges);
+        const sum = people.reduce((a, b) => a + b.age, 0);
+        // whithout the ".age", JS knows whih parameter is a number, 
+        // but for more accuracy it is better to use the ".age" parameter.
 
-        // });
+        console.log(sum / people.length);
     });
 
 })();
