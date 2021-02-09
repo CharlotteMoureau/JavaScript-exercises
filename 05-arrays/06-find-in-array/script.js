@@ -92,7 +92,7 @@
     // your code here
     document.getElementById("run").addEventListener("click", function () {
 
-        people.forEach(function (item, index, people) {
+        people.forEach(function (people, index, people) {
             if (people[index].firstname == "Jean" && people[index].lastname == "Dupont")
                 console.log(people[index].email, index);
         });
@@ -101,7 +101,7 @@
         // const lName = people.find(({ lastname }) => lastname === 'Dupont');
 
 
-        // people.forEach(function (item, index, people) {
+        // people.forEach(function (people, index, people) {
 
         //     if (people[index].firstname == fName.firstname && people[index].lastname == lName.lastname) {
         //         console.log(people[index].email, index);

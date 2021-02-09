@@ -9,7 +9,7 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     var people = [
         {
@@ -90,5 +90,17 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click', function () {
+
+        let sum = people.reduce((people, index) => {
+            return people + index.price
+        }, 0);
+        console.log(sum);
+        // people.forEach(function (people, index, people) {
+        //     let sumOfAges = (people[index].age).reduce((a, b) => a + b, 0);
+        //     console.log(sumOfAges);
+
+        // });
+    });
 
 })();
