@@ -13,8 +13,15 @@
     const keys = ["name", "species", "age", "gender", "color"];
     const values = ["Skitty", "cat", 9, "female", "tabby"];
     // your code here
-    document.getElementById('run').addEventListener('click', function () {
-        const test = Object.fromEntries(keys, values);
-        console.log(test);
+    let joinedArrays = keys.map(function (value, index) {
+        return [keys[index], values[index]];
     });
+
+    document.getElementById('run').addEventListener('click', function () {
+
+        const obj = Object.fromEntries(joinedArrays);
+
+        console.log(obj);
+    });
+
 })();
