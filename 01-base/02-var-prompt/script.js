@@ -13,6 +13,6 @@
 
     var user = prompt("What is your name?");
 
-    window.alert(`Hello ${user} !`);
+    alert(`Hello ${user} !`);
 
 })();
