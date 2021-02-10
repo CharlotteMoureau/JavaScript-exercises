@@ -19,4 +19,15 @@
         status: "married",
     };
     // your code here
+    document.getElementById('run').addEventListener('click', function () {
+        console.log(Object.keys(person));
+        console.log(Object.values(person));
+
+        // for (const [key, value] of Object.entries(person)) {
+        //     console.log(`${key}: ${value}`);
+        // }
+
+        // returns an array of a given object's own enumerable string-keyed property [key, value] pairs
+        // order is not guaranteed
+    });
 })();
