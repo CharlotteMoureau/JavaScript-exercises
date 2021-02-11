@@ -14,12 +14,12 @@
     // your code here
     document.getElementById('run').addEventListener('click', function () {
 
-        if (document.getElementById("pass-one").value === document.getElementById("pass-two").value) {
-            document.querySelector('#pass-one').style.border = "1px solid lightgray";
-            document.querySelector('#pass-two').style.border = "1px solid lightgray";
-        } else {
+        if (document.getElementById("pass-one").value !== document.getElementById("pass-two").value) {
             document.querySelector('#pass-one').style.border = "2px solid red";
             document.querySelector('#pass-two').style.border = "2px solid red";
+        } else {
+            document.querySelector('#pass-one').style.border = "1px solid lightgray";
+            document.querySelector('#pass-two').style.border = "1px solid lightgray";
         }
     });
 })();
