@@ -25,7 +25,7 @@
         document.getElementById("min").innerHTML = Math.min(...random);
         document.getElementById("max").innerHTML = Math.max(...random);
         document.getElementById("sum").innerHTML = random.reduce((a, b) => a + b, 0);
-        document.getElementById("average").innerHTML = random.reduce((a, b) => a + b, 0) / random.length;
+        document.getElementById("average").innerHTML = sum / random.length;
     });
 
 

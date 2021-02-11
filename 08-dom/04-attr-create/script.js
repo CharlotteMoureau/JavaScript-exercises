@@ -9,8 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     // your code here
+    let mySource = document.getElementById("source").getAttribute("data-image");
+    let myTarget = document.getElementById("target");
+    let newImage = document.createElement("img");
+
+    newImage.src = mySource;
+
+    myTarget.appendChild(newImage);
+    mySource.remove();
 
 })();
