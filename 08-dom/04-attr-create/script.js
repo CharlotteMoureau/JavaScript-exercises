@@ -13,12 +13,11 @@
 
     // your code here
     let mySource = document.getElementById("source").getAttribute("data-image");
-    let myTarget = document.getElementById("target");
     let newImage = document.createElement("img");
 
     newImage.src = mySource;
 
-    myTarget.appendChild(newImage);
-    mySource.remove();
+    document.getElementById("target").appendChild(newImage);
+    document.getElementById("source").remove();
 
 })();

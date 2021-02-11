@@ -9,8 +9,17 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     // your code here
+    document.getElementById('run').addEventListener('click', function () {
 
+        if (document.getElementById("pass-one").value === document.getElementById("pass-two").value) {
+            document.querySelector('#pass-one').style.border = "1px solid lightgray";
+            document.querySelector('#pass-two').style.border = "1px solid lightgray";
+        } else {
+            document.querySelector('#pass-one').style.border = "2px solid red";
+            document.querySelector('#pass-two').style.border = "2px solid red";
+        }
+    });
 })();

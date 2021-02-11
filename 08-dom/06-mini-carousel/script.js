@@ -9,9 +9,9 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
-    var gallery= [
+    var gallery = [
         "../../_shared/img/bell.svg",
         "../../_shared/img/clock.svg",
         "../../_shared/img/compass.svg",
@@ -20,5 +20,14 @@
     ];
 
     // your code here
+    let img = 1;
+
+    document.getElementById('next').addEventListener('click', function () {
+        document.querySelector('img').setAttribute('src', gallery[img]);
+        img++;
+        if (img == gallery.length) {
+            img = 0;
+        }
+    });
 
 })();
