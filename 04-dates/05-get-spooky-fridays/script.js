@@ -14,9 +14,9 @@
     document.getElementById("run").addEventListener("click", function () {
 
         function numberOfFridaythe13thsIn(year) {
-            var count = 0;
-            for (var month = 0; month < 12; month++) {
-                var d = new Date(year, month, 13);
+            let count = 0;
+            for (let month = 0; month < 12; month++) {
+                let d = new Date(year, month, 13);
                 if (d.getDay() == 5) {
                     let preciseMonth = d.toLocaleString('en-EN', { month: 'long' });
                     console.log(preciseMonth);
