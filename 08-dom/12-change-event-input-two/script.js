@@ -17,6 +17,7 @@
         let typedPassword = document.querySelector('#pass-one').value;
         let regex = ('(?=(.*\\d){2})[a-zA-Z0-9]{8,}');
         let checkPassword = typedPassword.match(regex);
+        console.log(checkPassword);
 
         if (checkPassword == null) {
             document.getElementById('validity').innerHTML = 'Not ok';
