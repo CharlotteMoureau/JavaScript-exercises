@@ -93,10 +93,8 @@
     document.getElementById('run').addEventListener('click', function () {
 
         const sum = people.reduce((a, b) => a + b.age, 0);
-        // whithout the ".age", JS knows whih parameter is a number, 
-        // but for more accuracy it is better to use the ".age" parameter.
 
-        console.log(sum / people.length);
+        console.log(sum);
     });
 
 })();

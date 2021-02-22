@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+
+    function comments(id) {
+
+        function callback(error, array) {
+            console.log(error);
+            console.log(array);
+        };
+
+        window.lib.getComments(id, callback);
+    }
+
+    document.getElementById('run').addEventListener('click', function () {
+        window.lib.getPosts(comments);
+    });
 })();

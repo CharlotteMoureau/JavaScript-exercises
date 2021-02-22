@@ -11,4 +11,12 @@
 
 (() => {
     // your code here
+    function callback(error, array) {
+        console.log(error);
+        console.log(array);
+    };
+
+    document.getElementById('run').addEventListener('click', function () {
+        window.lib.getPosts(callback);
+    });
 })();

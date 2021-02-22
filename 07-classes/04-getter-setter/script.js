@@ -16,11 +16,11 @@
             this.firstname = firstname;
             this.lastname = lastname;
         }
-        get name() {
+        get getName() {
             return `${this.firstname} ${this.lastname}`;
         }
 
-        set name(setter) {
+        set setName(setter) {
             let toSplit = setter.split(' ');
             this.firstname = toSplit[0];
             this.lastname = toSplit[1];
@@ -29,9 +29,9 @@
 
     document.getElementById('run').addEventListener('click', function () {
         let person = new Person('Jean-Michel', 'Test');
-        console.log(person.name);
+        console.log(person.getName);
 
-        person.name = 'Micheline Pasdinspi';
+        person.setName = 'Micheline Pasdinspi';
         console.log(person);
 
     });

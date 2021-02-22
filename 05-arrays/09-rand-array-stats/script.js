@@ -18,13 +18,16 @@
         let random = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100) + 1);
 
         random.forEach(function (item, index) {
-            let = insert = document.getElementById("n-" + (index + 1));
+            let insert = document.getElementById("n-" + (index + 1));
             insert.innerHTML = item;
         });
 
         document.getElementById("min").innerHTML = Math.min(...random);
         document.getElementById("max").innerHTML = Math.max(...random);
-        document.getElementById("sum").innerHTML = random.reduce((a, b) => a + b, 0);
+
+        let sum = random.reduce((a, b) => a + b, 0);
+
+        document.getElementById("sum").innerHTML = sum;
         document.getElementById("average").innerHTML = sum / random.length;
     });
 
