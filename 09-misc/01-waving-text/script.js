@@ -13,20 +13,25 @@
 
     // your code here
     let target = document.getElementById('target').textContent;
+
     let wave = [];
-    wave.push(target.slice(0, 8));
-    wave.push(target.slice(9, 26));
-    wave.push(target.slice(27, 33));
-    wave.push(target.slice(34, 40));
-    wave.push(target.slice(41,));
+    wave.push(target.slice(0, 11));
+    wave.push(target.slice(11, 22));
+    wave.push(target.slice(22, 33));
+    wave.push(target.slice(33, 44));
+    wave.push(target.slice(44, 55));
+    wave.push(target.slice(55, 66));
+    wave.push(target.slice(66,));
 
-    document.getElementById('target').innerHTML = '';
+    let waveWithoutCommas = wave.join('');
 
-    for (let i = 0; i < wave.length; i++) {
-        let randomEm = Math.floor(Math.random() * 4);
-        let p = document.createElement('p');
-        p.setAttribute('style', `font-size : ${randomEm}em ; display: inline;`)
-        p.innerHTML = wave[i];
-        document.getElementById('target').appendChild(p);
+    // setInterval(function () {
+    for (let i = 0; i < waveWithoutCommas.length; i++) {
+
+        let randomSize = Math.floor(Math.random() * 5) + 1;
+
+        document.getElementById('target').innerHTML = waveWithoutCommas;
+        document.getElementById('target').style.fontSize = `${randomSize}em`;
     }
+    // }, 1000);
 })();

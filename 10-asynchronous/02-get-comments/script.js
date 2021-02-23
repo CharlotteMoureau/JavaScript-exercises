@@ -22,7 +22,13 @@
         window.lib.getComments(id, callback);
     }
 
+    function callback(error, array) {
+        console.log(error);
+        console.log(array);
+    };
+
     document.getElementById('run').addEventListener('click', function () {
-        window.lib.getPosts(comments);
+        window.lib.getPosts(callback);
+        window.lib.getComments(comments);
     });
 })();
