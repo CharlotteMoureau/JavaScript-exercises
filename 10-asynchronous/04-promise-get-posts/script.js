@@ -11,11 +11,9 @@
 
 (() => {
     // your code here
-    function promise() {
-
-    };
-
     document.getElementById('run').addEventListener('click', function () {
-        window.lib.getPosts(promise);
+        window.lib.getPosts().then(function getPosts(array) {
+            console.log(array);
+        });
     });
 })();
