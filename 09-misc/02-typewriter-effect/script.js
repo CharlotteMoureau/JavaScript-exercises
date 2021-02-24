@@ -9,8 +9,18 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     // your code here
+    let textTarget = document.querySelector("#target").textContent;
+    document.querySelector("#target").textContent = "";
+    let i = 0;
 
+    function writer() {
+        if (i <= textTarget.length)
+            document.querySelector("#target").textContent += textTarget.charAt(i);
+        i++;
+        setTimeout(writer, 50);
+    }
+    writer();
 })();

@@ -9,8 +9,13 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+(function () {
 
     // your code here
+    let input = document.querySelector("#slider");
 
+    input.onmousemove = () => {
+        let inputValue = document.querySelector("#slider").value;
+        document.querySelector('#target').textContent = "0" + inputValue;
+    };
 })();

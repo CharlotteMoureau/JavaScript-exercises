@@ -11,4 +11,25 @@
 
 (() => {
     // your code here
+    const template = document.querySelector("#tpl-hero");
+    const target = document.querySelector("#target");
+
+    document.getElementById('run').addEventListener('click', function () {
+
+        async function test() {
+            const myFetch = await fetch('http://localhost:3000/heroes');
+            const data = await myFetch.json();
+
+            data.forEach(({ name, alterEgo, abilities }) => {
+                const clone = template.cloneNode(true).content;
+
+                clone.querySelector(".name").textContent = name;
+                clone.querySelector(".alter-ego").textContent = alterEgo;
+                clone.querySelector(".powers").textContent = abilities.join('. ');
+
+                target.appendChild(clone);
+            });
+        }
+        test();
+    });
 })();

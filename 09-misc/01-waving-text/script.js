@@ -12,26 +12,22 @@
 (function () {
 
     // your code here
-    let target = document.getElementById('target').textContent;
+    const fontSizes = [2.2, 2.4, 2.8, 3.2, 3.6, 3.2, 2.8, 2.4, 2.2];
+    const target = document.querySelector("#target");
+    const text = target.innerText;
+    const letters = text.split("");
+    console.log(letters);
+    let shift = 0;
 
-    let wave = [];
-    wave.push(target.slice(0, 11));
-    wave.push(target.slice(11, 22));
-    wave.push(target.slice(22, 33));
-    wave.push(target.slice(33, 44));
-    wave.push(target.slice(44, 55));
-    wave.push(target.slice(55, 66));
-    wave.push(target.slice(66,));
-
-    let waveWithoutCommas = wave.join('');
-
-    // setInterval(function () {
-    for (let i = 0; i < waveWithoutCommas.length; i++) {
-
-        let randomSize = Math.floor(Math.random() * 5) + 1;
-
-        document.getElementById('target').innerHTML = waveWithoutCommas;
-        document.getElementById('target').style.fontSize = `${randomSize}em`;
-    }
-    // }, 1000);
+    setInterval(() => {
+        target.innerHTML = letters
+            .map((letter, i) => {
+                if (++shift >= fontSizes.length) {
+                    shift = 0;
+                }
+                return `<span style="font-size: ${fontSizes[(i + shift) % fontSizes.length]
+                    }rem">${letter}</span>`;
+            })
+            .join("");
+    }, 500);
 })();
