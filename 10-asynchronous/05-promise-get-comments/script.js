@@ -12,15 +12,27 @@
 (() => {
     // your code here
     document.getElementById('run').addEventListener('click', function () {
-        window.lib.getPosts().then(function getPosts(array) {
 
-            array.forEach(function myComments(post) {
+        const promise1 = window.lib.getPosts((resolve, reject) => {
+            resolve();
+            reject(new Error("Error!"));
+        });
 
-                window.lib.getComments().then(post.id, (err, comments) => {
+        const promise2 = window.lib.getComments((id, reject) => {
+            id();
+            reject(new Error("Error!"));
+        });
+
+
+        promise1.then((value) => {
+
+            value.forEach((post) => {
+
+                promise2.then((comments) => {
                     post.comments = comments;
                 });
             });
-            console.log(array);
+            console.log(value);
         });
     });
 })();
