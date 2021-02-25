@@ -39,7 +39,6 @@
             } else {
                 alert('there seems to be an empty input');
             }
-
         };
 
         array.then(data => {
