@@ -11,37 +11,40 @@
 
 (() => {
     // your code here
-    async function aNewHeroAppears() {
+    async function getHero() {
         try {
-            const myFetch = await fetch('http://localhost:3000/heroes');
-            const data = await myFetch.json();
-
-            console.log(data);
-
-            const nameInput = document.querySelector('#hero-name').value;
-            const alterEgoInput = document.querySelector('#hero-alter-ego').value;
-            const powersInput = document.querySelector('#hero-powers').value;
-
-            if (nameInput.length != 0 && alterEgoInput.length != 0 && powersInput.length != 0) {
-                let i = data.length + 1;
-                i++;
-                const newHero = {
-                    id: i,
-                    name: nameInput,
-                    alterEgo: alterEgoInput,
-                    abilities: [powersInput],
-                }
-                data.push(newHero);
-                console.log(data);
-
-            } else {
-                alert('There seems to be an empty input');
-            }
+            const hero = await fetch('http://localhost:3000/heroes');
+            const data = await hero.json();
+            return data;
         } catch (error) {
             console.error(error);
-        }
+        };
     }
+
+    let array = getHero();
+
     document.getElementById('run').addEventListener('click', function () {
-        aNewHeroAppears();
+        function newHero(data) {
+            const nameInput = document.querySelector('#hero-name').value;
+            const alterEgo = document.querySelector('#hero-alter-ego').value;
+            const power = document.querySelector('#hero-powers').value;
+
+            if (nameInput.length != 0 && alterEgo.length != 0 && power.length != 0) {
+                data.push({
+                    'id': data.length + 1,
+                    'name': nameInput,
+                    'alterEgo': alterEgo,
+                    'powers': [power]
+                });
+            } else {
+                alert('there seems to be an empty input');
+            }
+
+        };
+
+        array.then(data => {
+            newHero(data);
+            console.log(data);
+        })
     });
 })();
